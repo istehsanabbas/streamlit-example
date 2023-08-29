@@ -2,3 +2,6 @@ altair
 pandas
 streamlit
 matplotlib
+seaborn
+sklearn
+xgboost
