@@ -1,13 +1,12 @@
 import streamlit as st
 import pandas as pd
+import matplotlib
 import matplotlib.pyplot as plt
 import seaborn as sns
 from sklearn.model_selection import train_test_split
 import xgboost as xgb
 from sklearn.metrics import confusion_matrix, accuracy_score, recall_score, precision_score, f1_score
 from sklearn.preprocessing import OneHotEncoder
-import itertools 
-
 
 st.set_page_config(page_title='ROV Prediction', page_icon=':chart_with_upwards_trend:', layout='wide', initial_sidebar_state='collapsed')
 
