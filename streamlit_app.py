@@ -33,7 +33,7 @@ if uploaded_file is not None:
         # Convert categorical columns using one-hot encoding
         encoder = OneHotEncoder(sparse=False, drop='first')
         X_categorical_encoded = encoder.fit_transform(X_categorical)
-        X_categorical_encoded_df = pd.DataFrame(X_categorical_encoded, columns=encoder.get_feature_names(selected_categorical_features))
+        X_categorical_encoded_df = pd.DataFrame(X_categorical_encoded, columns=encoder.get_feature_names_out(selected_categorical_features))
         
         # Concatenate one-hot encoded categorical and numerical features
         X = pd.concat([X_categorical_encoded_df, X_numerical], axis=1)
